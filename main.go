@@ -23,8 +23,11 @@ func main() {
 
 	if costOfGoods >= 10000 {
 		fmt.Println("Стоимость товара превышает 10000, поэтому вы получаете скидку 50% на доставку!")
-
 		costOfDelivery /= 2
+
+		if costOfGoods%2 == 0 {
+			fmt.Println("Покупателю положен подарок!")
+		}
 	}
 
 	fmt.Println("Стоимость товара:", costOfGoods)
